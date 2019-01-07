@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import MainHome from '../views/pf-home.vue'
-import ProfilePage from '../views/pf-profile.vue';
-import MainBody from '../views/pf-body.vue';
-import MainFooter from '../views/pf-footer.vue';
+import MainHome from '../views/Home.vue'
+import ProfilePage from '../views/Profile.vue';
+import MainBody from '../views/Portfolio.vue';
+import MainFooter from '../views/Contactme.vue';
 
 Vue.use(VueRouter);
 
