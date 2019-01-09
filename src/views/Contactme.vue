@@ -1,5 +1,5 @@
 <template>
-    <div>this footer
+    <div>
        <div>
           <h1>Contact me</h1>
           <span>저의 스킬이 마음에 드셨다면 연락주세요!</span>

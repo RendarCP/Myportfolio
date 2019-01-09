@@ -1,27 +1,29 @@
 <template>
-    <div>this profile
+    <div>
         <div id="img">
-            <img src="../assets/logo.png" id="home-img">
+            <img src="../assets/logo.png" id="profile-img">
             <span>
                 <h1>저를 소개합니다</h1>
-                블라블라블라~~~~~!블라블라블라~~~~~!블라블라블라~~~~~!블라블라블라~~~~~!블라블라블라~~~~~!
+                <div id="myname">조성욱</div>
+                <div>1996년 2월 17일</div>
             </span>
             <div>
-                <h1>Skills</h1>
+                <div class="title">Skills</div>
                <div>
                    <b-row>
-                      <b-col class="list"><img src="../assets/csharp.png" class="icon-img">C#</b-col>
-                      <b-col class="list"><img src="../assets/Html_Css.png" class="icon-img">HTML/CSS</b-col>
-                      <b-col class="list"><img src="../assets/Javascript.png" class="icon-img">JAVASCRIPT</b-col>
-                      <b-col class="list"><img src="../assets/logo.png" class="icon-img">Vue</b-col>
+                      <b-col class="list"><img src="../assets/csharp.png" class="icon-img"><h1 class="skill-lg">C#</h1></b-col>
+                      <b-col class="list"><img src="../assets/Html_Css.png" class="icon-img"><h1 class="skill-lg">HTML/CSS</h1></b-col>
+                      <b-col class="list"><img src="../assets/Javascript.png" class="icon-img"><h1 class="skill-lg">JAVASCRIPT</h1></b-col>
+                      <b-col class="list"><img src="../assets/logo.png" class="icon-img"><h1 class="skill-lg">Vue</h1></b-col>
                   </b-row>
                   <b-row>
-                      <b-col class="list"><img src="../assets/React.png" class="icon-img">React</b-col>
-                      <b-col class="list"><img src="../assets/MSSQL.png" class="icon-img">MSSQL</b-col>
-                      <b-col class="list"><img src="../assets/JAVA.png" class="icon-img">JAVA</b-col>
-                      <b-col class="list"><img src="../assets/android.png" class="icon-img">ANDROID</b-col>
+                      <b-col class="list"><img src="../assets/React.png" class="icon-img"><h1 class="skill-lg">React</h1></b-col>
+                      <b-col class="list"><img src="../assets/MSSQL.png" class="icon-img"><h1 class="skill-lg">MSSQL</h1></b-col>
+                      <b-col class="list"><img src="../assets/JAVA.png" class="icon-img"><h1 class="skill-lg">JAVA</h1></b-col>
+                      <b-col class="list"><img src="../assets/android.png" class="icon-img"><h1 class="skill-lg">ANDROID</h1></b-col>
                   </b-row>
                </div>
+               <div class="title">Career</div>
             </div>
         </div>
         <div></div>
@@ -30,12 +32,11 @@
 
 <script>
 export default {
-
 }
 </script>
 
 <style>
- #home-img{
+ #profile-img{
        width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -46,16 +47,31 @@ export default {
      text-align:center; 
     display:block;
  }
- .icon-img{
+ #myname{
+     font-family: 'Do Hyeon', sans-serif;
+     font-size:30px;
+ }
+ .icon-img{ /*아이콘 이미지 지정*/
   width: 200px;
   height: 200px;
   border-radius: 100%;
   border: 2px solid #dee2e6;
   background-color: #fff;
  }
- .list{
+ .list{ /*각각의 리스트 css*/
      background-color: #dee2e6;
      margin:10px;
      border: 5px solid #dee2e6;
+ }
+ .skill-lg{ /*스킬 언어명 폰트 지정*/
+     font-size:40px;
+     font-family: 'Anton', sans-serif;
+ }
+ .title{ /*기본적 타이틀 폰트 지정*/
+     font-family: 'Source Code Pro', monospace;
+     text-align:left;
+     margin-left:20px;
+     font-size:30px;
+     text-decoration: overline;
  }
 </style>

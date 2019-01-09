@@ -1,5 +1,5 @@
 <template>
-    <div>this body
+    <div>
         <div>
             <h1>My PortFolio</h1>
             <div>
