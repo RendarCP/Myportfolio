@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="img">
-            <img src="../assets/logo.png" id="profile-img">
+            <img src="../images/logo.png" id="profile-img">
             <span>
                 <h1>저를 소개합니다</h1>
                 <div id="myname">조성욱</div>
@@ -11,19 +11,18 @@
                 <div class="title">Skills</div>
                <div>
                    <b-row>
-                      <b-col class="list"><img src="../assets/csharp.png" class="icon-img"><h1 class="skill-lg">C#</h1></b-col>
-                      <b-col class="list"><img src="../assets/Html_Css.png" class="icon-img"><h1 class="skill-lg">HTML/CSS</h1></b-col>
-                      <b-col class="list"><img src="../assets/Javascript.png" class="icon-img"><h1 class="skill-lg">JAVASCRIPT</h1></b-col>
-                      <b-col class="list"><img src="../assets/logo.png" class="icon-img"><h1 class="skill-lg">Vue</h1></b-col>
+                      <b-col class="list"><img src="../images/csharp.png" class="icon-img"><h1 class="skill-lg">C#</h1></b-col>
+                      <b-col class="list"><img src="../images/Html_Css.png" class="icon-img"><h1 class="skill-lg">HTML/CSS</h1></b-col>
+                      <b-col class="list"><img src="../images/Javascript.png" class="icon-img"><h1 class="skill-lg">JAVASCRIPT</h1></b-col>
+                      <b-col class="list"><img src="../images/logo.png" class="icon-img"><h1 class="skill-lg">Vue</h1></b-col>
                   </b-row>
                   <b-row>
-                      <b-col class="list"><img src="../assets/React.png" class="icon-img"><h1 class="skill-lg">React</h1></b-col>
-                      <b-col class="list"><img src="../assets/MSSQL.png" class="icon-img"><h1 class="skill-lg">MSSQL</h1></b-col>
-                      <b-col class="list"><img src="../assets/JAVA.png" class="icon-img"><h1 class="skill-lg">JAVA</h1></b-col>
-                      <b-col class="list"><img src="../assets/android.png" class="icon-img"><h1 class="skill-lg">ANDROID</h1></b-col>
+                      <b-col class="list"><img src="../images/React.png" class="icon-img"><h1 class="skill-lg">React</h1></b-col>
+                      <b-col class="list"><img src="../images/MSSQL.png" class="icon-img"><h1 class="skill-lg">MSSQL</h1></b-col>
+                      <b-col class="list"><img src="../images/JAVA.png" class="icon-img"><h1 class="skill-lg">JAVA</h1></b-col>
+                      <b-col class="list"><img src="../images/android.png" class="icon-img"><h1 class="skill-lg">ANDROID</h1></b-col>
                   </b-row>
                </div>
-               <div class="title">Career</div>
             </div>
         </div>
         <div></div>

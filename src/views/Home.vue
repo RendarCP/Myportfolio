@@ -1,15 +1,17 @@
 <template>
     <div>
-      <div id="Home-img">
+      <div>
         <!--<img src="../assets/space_home.jpg" class="img">-->
-        <div class="img"></div>
-        <div id="home-center">
+        <div id="home-img"></div>
+        <div id="home-img-center">
             <div id="home-title">Seong Wook Jo</div>
                 <div class="home-pf">Portfolio</div>
                     <div>안녕하세요 조성욱의 포트폴리오사이트입니다.</div>
                     <div>제 사이트에 오신걸 환영합니다.</div>
                     <div></div>
-                <div><button @click="Portfolio">View My Portfolio</button><button @click="Contactme">Contact me</button></div>
+                <div><b-button @click="Portfolio" variant="primary" class="main-btn">View My Portfolio</b-button>
+                <b-button @click="Contactme" class="main-btn">Contact me</b-button>
+                </div>
             </div>
       </div>
     </div>
@@ -48,9 +50,12 @@ export default {
   top: 0px;
   height: 1000px;
 } */
-.img{
+.main-btn{
+    margin:5px;
+}
+#home-img{
   margin-top:-100px;
-  background-image: url("../assets/space_home.jpg");
+  background-image: url("../images/space_home.jpg");
   background-color: #cccccc;
   height: 1000px;
   background-position: center;
@@ -61,7 +66,7 @@ export default {
   top: 0px;
   z-index: -1;
 }
-#home-center{
+#home-img-center{
   text-align: center;
   position: absolute;
   top: 50%;

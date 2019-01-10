@@ -29,8 +29,8 @@ export default {
 
 <style>
 .nav{
-  margin-top:10px;
-  background-color: gainsboro;
+    background-color: gainsboro;
+    opacity: 0.8; 
 }
 .nav-font{
     margin-right: 30px;
