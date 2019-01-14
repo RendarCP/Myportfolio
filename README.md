@@ -1,6 +1,6 @@
 # rendar_pf
 
-> A Vue.js project
+> rendar-portfolio-project-web
 
 ## Build Setup
 
