@@ -4,6 +4,7 @@ import MainHome from '../views/Home.vue'
 import ProfilePage from '../views/Profile.vue';
 import MainBody from '../views/Portfolio.vue';
 import MainFooter from '../views/Contactme.vue';
+import FileUploader from '../views/fileuploader.vue'
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,10 @@ export const router = new VueRouter({
         {
             path:'/contactme',
             component: MainFooter,
+        },
+        {
+            path:'/write_pf',
+            component: FileUploader,
         }
     ],
 })
