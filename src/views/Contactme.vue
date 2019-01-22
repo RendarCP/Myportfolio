@@ -52,8 +52,8 @@ export default {
 }
 #contact-img{
     margin-top:-100px;
-    background-image: url("../images/desk_me.jpg");
-    height:800px;
+    background-image: url("../assets/images/desk_me.jpg");
+    height:1080px;
     background-color: #cccccc;
     background-position: center;
     background-repeat: no-repeat;

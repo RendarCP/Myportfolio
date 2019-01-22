@@ -11,12 +11,12 @@ Vue.use(VueRouter);
 export const router = new VueRouter({
     mode:'history',
     routes:[
+        // {
+        //     path:'/',
+        //     redirect:'/',
+        // },
         {
             path:'/',
-            redirect:'/home',
-        },
-        {
-            path:'/home',
             component: MainHome,
         },
         {
@@ -32,7 +32,7 @@ export const router = new VueRouter({
             component: MainFooter,
         },
         {
-            path:'/write_pf',
+            path:'/edit',
             component: FileUploader,
         }
     ],
