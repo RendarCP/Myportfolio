@@ -1,7 +1,6 @@
 <template>
     <div>
         fileUploader
-<<<<<<< HEAD
         <b-container class="test">
             <b-row class="test-row">
                 <b-col cols="4">타이틀</b-col>
@@ -61,13 +60,10 @@
                 </tr>
             </table>
         </div>
-=======
->>>>>>> parent of ab52539... 파일업로드 뷰 제작 및 기타 사항 수정
     </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 import firebase from 'firebase';
 export default {
     data() {
@@ -130,15 +126,11 @@ export default {
         //     console.log(file);
         // }
     }
-=======
-export default {
-
->>>>>>> parent of ab52539... 파일업로드 뷰 제작 및 기타 사항 수정
 }
 </script>
 
 <style>
-<<<<<<< HEAD
+
 table{
     border: 1px solid gray;
 }
@@ -188,7 +180,4 @@ border: 1px solid gray;
 #img-size {
     width: 30%;
 }
-=======
-
->>>>>>> parent of ab52539... 파일업로드 뷰 제작 및 기타 사항 수정
 </style>
