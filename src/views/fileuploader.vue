@@ -4,10 +4,25 @@
         <b-container class="test">
             <b-row class="test-row">
                 <b-col cols="4">타이틀</b-col>
-                <b-col cols="8"><b-form-input v-model="text1"
+                <b-col cols="8">
+                    <b-form-input v-model="title"
                             type="text"
                             placeholder="Enter your name">
-                        </b-form-input>
+                    </b-form-input>
+                </b-col>
+                <b-col cols="4">설명</b-col>
+                <b-col cols="8">
+                    <b-form-input v-model="contents"
+                            type="text"
+                            placeholder="Enter your name">
+                    </b-form-input>
+                </b-col>
+                <b-col cols="4">githubUrl</b-col>
+                <b-col cols="8">
+                    <b-form-input v-model="gitUrl"
+                            type="text"
+                            placeholder="Enter your name">
+                    </b-form-input>
                 </b-col>
             </b-row>
             <b-row class="test-row">
@@ -18,17 +33,55 @@
                 <b-col cols="8"><b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..." @change="onFileChange"></b-form-file></b-col>
             </b-row>
         </b-container>
-        <b-button variant="success" class="edit-btn" @click="onFileChange">submit</b-button>
+        <b-button variant="success" class="edit-btn" @click="addPf">submit</b-button>
+        <div>
+            <table>
+                <tr>
+                    <th>
+                        title
+                    </th>
+                    <th>
+                        contents
+                    </th>
+                     <th>
+                        giturl
+                    </th> 
+                </tr>
+                <tr v-for="portfolio in pflist">
+                    <td>
+                        {{ portfolio.title }}
+                    </td>
+                    <td>
+                        {{ portfolio.content }}
+                    </td> 
+                     <td>
+                        {{ portfolio.gitUrl }}
+                    </td> 
+                </tr>
+            </table>
+        </div>
     </div>
 </template>
 
 <script>
-import firebase,{ functions } from 'firebase';
+import firebase from 'firebase';
 export default {
     data() {
         return{
             url: null,
+            title: '',
+            contents:'',
+            file:'',
+            gitUrl:'',
+            pflist:[]
         }
+    },
+    created(){
+        firebase.database().ref('portfolio').on('value',(snapshot)=>{
+            //console.log(snapshot.val());
+            this.pflist = snapshot.val();
+            console.log(this.pflist);
+        });
     },
     methods: {
         onFileChange(e){
@@ -57,6 +110,15 @@ export default {
                 console.log(error);
             });
         },
+        addPf(){
+            firebase.database().ref('portfolio').push({
+                title:this.title,
+                content:this.contents,
+                gitUrl:this.gitUrl,
+            })
+            .then((data)=>{console.log(data)})
+            .catch((error)=>{console.log(error)});
+        }
         // upload(file){
         //     console.log(file);
         //     this.fileName = file.name;
@@ -68,6 +130,23 @@ export default {
 </script>
 
 <style>
+table{
+    border: 1px solid gray;
+}
+tr{
+border: 1px solid gray;
+}
+td{
+border: 1px solid gray;
+}
+th{
+border: 1px solid gray;
+}
+.img-test{
+    width:300px;
+    height:500px;
+    
+}
 .test{
     border: 2px solid black;
 }
