@@ -11,7 +11,7 @@
          <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
            <b-collapse is-nav id="nav_dropdown_collapse">
             <b-navbar-nav>
-              <b-nav-item><router-link to="/" class="nav-font">Home</router-link></b-nav-item>
+              <b-nav-item><router-link to="/home" class="nav-font">Home</router-link></b-nav-item>
               <b-nav-item><router-link to="/aboutme" class="nav-font">About me</router-link></b-nav-item>
               <b-nav-item><router-link to="/portfolio" class="nav-font">Portfolio</router-link></b-nav-item>
               <b-nav-item><router-link to="/contactme" class="nav-font">Contact me</router-link></b-nav-item>

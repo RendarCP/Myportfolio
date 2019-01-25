@@ -3,27 +3,27 @@
         <div>
             <h1 id="pf-title">My PortFolio</h1>
             <div class="pf-content">
-               <img src="../assets/images/calculator.png">
+               <img src="../images/calculator.png">
                <p><a href="#">간단 계산기</a></p>
                <p>{{ calcontents }}</p>
             </div>
             <div class="pf-content">
-               <img src="../assets/images/dischargecal.png">
+               <img src="../images/dischargecal.png">
                <p><a href="https://github.com/RendarCP/dischargeCal" target="_blank">전역계산기</a></p>
                <p>{{ dischargeCal }}</p>
             </div>
             <div class="pf-content">
-               <img src="../assets/images/memo.png">
+               <img src="../images/memo.png">
                <p><a href="#">간단메모장</a></p>
                <p>{{ memo }}</p>
             </div>
             <div class="pf-content">
-               <img src="../assets/images/puzzlegame.png">
+               <img src="../images/puzzlegame.png">
                <p><a href="#">퍼즐게임</a></p>
                <p>{{ puzzlegame }}</p>
             </div>
              <div class="pf-content">
-               <img src="../assets/images/traview.png">
+               <img src="../images/traview.png">
                <p><a href="#">Traview프로젝트(여행리뷰)</a></p>
                <p>{{ traview }}</p>
             </div>

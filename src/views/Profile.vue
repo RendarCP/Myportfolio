@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="img">
-            <img src="../assets/images/My_Image.jpg" id="profile-img">
+            <img src="../images/logo.png" id="profile-img">
             <span>
                 <h1>저를 소개합니다</h1>
                 <div id="myname">조성욱</div>
@@ -11,16 +11,16 @@
                 <div class="title">Skills</div>
                <div>
                    <b-row>
-                      <b-col class="list"><img src="../assets/images/csharp.png" class="icon-img"><h1 class="skill-lg">C#</h1></b-col>
-                      <b-col class="list"><img src="../assets/images/Html_Css.png" class="icon-img"><h1 class="skill-lg">HTML/CSS</h1></b-col>
-                      <b-col class="list"><img src="../assets/images/Javascript.png" class="icon-img"><h1 class="skill-lg">JAVASCRIPT</h1></b-col>
-                      <b-col class="list"><img src="../assets/images/logo.png" class="icon-img"><h1 class="skill-lg">Vue</h1></b-col>
+                      <b-col class="list"><img src="../images/csharp.png" class="icon-img"><h1 class="skill-lg">C#</h1></b-col>
+                      <b-col class="list"><img src="../images/Html_Css.png" class="icon-img"><h1 class="skill-lg">HTML/CSS</h1></b-col>
+                      <b-col class="list"><img src="../images/Javascript.png" class="icon-img"><h1 class="skill-lg">JAVASCRIPT</h1></b-col>
+                      <b-col class="list"><img src="../images/logo.png" class="icon-img"><h1 class="skill-lg">Vue</h1></b-col>
                   </b-row>
                   <b-row>
-                      <b-col class="list"><img src="../assets/images/React.png" class="icon-img"><h1 class="skill-lg">React</h1></b-col>
-                      <b-col class="list"><img src="../assets/images/MSSQL.png" class="icon-img"><h1 class="skill-lg">MSSQL</h1></b-col>
-                      <b-col class="list"><img src="../assets/images/JAVA.png" class="icon-img"><h1 class="skill-lg">JAVA</h1></b-col>
-                      <b-col class="list"><img src="../assets/images/android.png" class="icon-img"><h1 class="skill-lg">ANDROID</h1></b-col>
+                      <b-col class="list"><img src="../images/React.png" class="icon-img"><h1 class="skill-lg">React</h1></b-col>
+                      <b-col class="list"><img src="../images/MSSQL.png" class="icon-img"><h1 class="skill-lg">MSSQL</h1></b-col>
+                      <b-col class="list"><img src="../images/JAVA.png" class="icon-img"><h1 class="skill-lg">JAVA</h1></b-col>
+                      <b-col class="list"><img src="../images/android.png" class="icon-img"><h1 class="skill-lg">ANDROID</h1></b-col>
                   </b-row>
                </div>
             </div>
@@ -36,11 +36,11 @@ export default {
 
 <style>
  #profile-img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    background-color: black;
+       width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: black;
  }
  #img{
      text-align:center; 

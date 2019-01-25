@@ -55,9 +55,9 @@ export default {
 }
 #home-img{
   margin-top:-100px;
-  background-image: url("../assets/images/space_home.jpg");
+  background-image: url("../images/space_home.jpg");
   background-color: #cccccc;
-  height: 1080px;
+  height: 1000px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
