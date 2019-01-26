@@ -24,6 +24,13 @@
                             placeholder="Enter your name">
                     </b-form-input>
                 </b-col>
+                <b-col cols="4">imgUrl</b-col>
+                <b-col cols="8">
+                    <b-form-input v-model="imgUrl"
+                            type="text"
+                            placeholder="Enter your name">
+                    </b-form-input>
+                </b-col>
             </b-row>
             <b-row class="test-row">
                 <b-col id="preview"><img v-if="url" :src="url" id="img-size"></b-col>
@@ -38,6 +45,9 @@
             <table>
                 <tr>
                     <th>
+                        img
+                    </th>
+                    <th>
                         title
                     </th>
                     <th>
@@ -49,13 +59,16 @@
                 </tr>
                 <tr v-for="portfolio in pflist">
                     <td>
+                       <img :src="portfolio.imgUrl" id="img-size">
+                    </td>
+                    <td>
                         {{ portfolio.title }}
                     </td>
                     <td>
                         {{ portfolio.content }}
                     </td> 
                      <td>
-                        {{ portfolio.gitUrl }}
+                        <a v-bind:href="portfolio.gitUrl">{{ portfolio.title }}</a>
                     </td> 
                 </tr>
             </table>
@@ -64,7 +77,8 @@
 </template>
 
 <script>
-import firebase from 'firebase';
+import firebase from '../firebase.js';
+import { storage, functions } from 'firebase';
 export default {
     data() {
         return{
@@ -73,6 +87,7 @@ export default {
             contents:'',
             file:'',
             gitUrl:'',
+            imgUrl:[],
             pflist:[]
         }
     },
@@ -84,6 +99,10 @@ export default {
         });
     },
     methods: {
+        preview(e){
+            const file = e.target.files[0];
+            this.url = URL.createObjectURL(file);
+        },
         onFileChange(e){
             // const file = e.target.files[0];
             // this.url = URL.createObjectURL(file);
@@ -91,31 +110,65 @@ export default {
             // this.fileName = file.name;
             // firebase.storage().ref('image/' + file.name).put(file)
             //  //console.log(file);
+            // let getFile = e.target.files[0];
+            // console.log(getFile);
+            // let storageRef = firebase.storage().ref('image/'+getFile.name);
+            // let task = storageRef.put(getFile)
+            // .then(response =>{
+            //     console.log("업로드 성공");
+            //     storageRef.getDownloadURL().then(function(url){
+            //         this.imgUrl = url;
+            //         console.log(this.imgUrl);
+            //          console.log(url);
+            //     })
+            // //    task.snapshot.ref().getDownloadURL().then(function(downloadURL){
+            // //     console.log('File downloadUrl',downloadURL)});
+            // })
+            // // .then(snapshot =>{
+            // //     storageRef.getDownloadURL().then(function(url){
+            // //             console.log(url);
+            // //     })
+
+            // // })
             let getFile = e.target.files[0];
+            this.url = URL.createObjectURL(getFile);
             console.log(getFile);
             let storageRef = firebase.storage().ref('image/'+getFile.name);
             let task = storageRef.put(getFile)
-            .then(response =>{
-                console.log("업로드 성공");
-            //    task.snapshot.ref().getDownloadURL().then(function(downloadURL){
-            //     console.log('File downloadUrl',downloadURL)});
-            })
-            .then(snapshot =>{
-                storageRef.getDownloadURL().then(function(url){
-                        console.log(url);
+            return task
+            .then((task)=>{
+                console.log("업로드완료");
+                storageRef.getDownloadURL().then((downloadURL)=>{
+                console.log(downloadURL);
+                this.imgUrl = downloadURL;
                 })
-
             })
             .catch((error)=>{
                 console.log(error);
             });
         },
         addPf(){
-            firebase.database().ref('portfolio').push({
+            // let getFile = e.target.files[0];
+            // this.url = URL.createObjectURL(getFile);
+            // console.log(getFile);
+            // let storageRef = firebase.storage().ref('image/'+getFile.name);
+            // let task = storageRef.put(getFile)
+            // return task
+            // .then((task)=>{
+                // storageRef.getDownloadURL().then((downloadURL)=>{
+                firebase.database().ref('portfolio').push({
                 title:this.title,
                 content:this.contents,
                 gitUrl:this.gitUrl,
+                imgUrl:this.imgUrl
             })
+            //     })
+            // })
+            // firebase.database().ref('portfolio').push({
+            //     title:this.title,
+            //     content:this.contents,
+            //     gitUrl:this.gitUrl,
+            // })
             .then((data)=>{console.log(data)})
             .catch((error)=>{console.log(error)});
         }

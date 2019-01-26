@@ -32,7 +32,7 @@ export const router = new VueRouter({
             component: MainFooter,
         },
         {
-            path:'/write_pf',
+            path:'/edit',
             component: FileUploader,
         }
     ],
