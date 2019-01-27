@@ -1,31 +1,30 @@
 <template>
     <div>
-        fileUploader
-        <b-container class="test">
-            <b-row class="test-row">
+        <b-container class="container">
+            <b-row>
                 <b-col cols="4">타이틀</b-col>
-                <b-col cols="8">
+                <b-col cols="8" class="test">
                     <b-form-input v-model="title"
                             type="text"
                             placeholder="Enter your name">
                     </b-form-input>
                 </b-col>
                 <b-col cols="4">설명</b-col>
-                <b-col cols="8">
+                <b-col cols="8" class="test">
                     <b-form-input v-model="contents"
                             type="text"
                             placeholder="Enter your name">
                     </b-form-input>
                 </b-col>
                 <b-col cols="4">githubUrl</b-col>
-                <b-col cols="8">
+                <b-col cols="8" class="test">
                     <b-form-input v-model="gitUrl"
                             type="text"
                             placeholder="Enter your name">
                     </b-form-input>
                 </b-col>
                 <b-col cols="4">imgUrl</b-col>
-                <b-col cols="8">
+                <b-col cols="8" class="test">
                     <b-form-input v-model="imgUrl"
                             type="text"
                             placeholder="Enter your name">
@@ -37,42 +36,10 @@
             </b-row>
             <b-row class="test-row">
                 <b-col cols="4">사진첨부</b-col>
-                <b-col cols="8"><b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..." @change="onFileChange"></b-form-file></b-col>
+                <b-col cols="8" class="test"><b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..." @change="onFileChange"></b-form-file></b-col>
             </b-row>
         </b-container>
         <b-button variant="success" class="edit-btn" @click="addPf">submit</b-button>
-        <div>
-            <table>
-                <tr>
-                    <th>
-                        img
-                    </th>
-                    <th>
-                        title
-                    </th>
-                    <th>
-                        contents
-                    </th>
-                     <th>
-                        giturl
-                    </th> 
-                </tr>
-                <tr v-for="portfolio in pflist">
-                    <td>
-                       <img :src="portfolio.imgUrl" id="img-size">
-                    </td>
-                    <td>
-                        {{ portfolio.title }}
-                    </td>
-                    <td>
-                        {{ portfolio.content }}
-                    </td> 
-                     <td>
-                        <a v-bind:href="portfolio.gitUrl">{{ portfolio.title }}</a>
-                    </td> 
-                </tr>
-            </table>
-        </div>
     </div>
 </template>
 
@@ -169,7 +136,14 @@ export default {
             //     content:this.contents,
             //     gitUrl:this.gitUrl,
             // })
-            .then((data)=>{console.log(data)})
+            .then((data)=>{
+                console.log(data)
+                this.title = '',
+                this.contents = '',
+                this.gitUrl = '',
+                this.imgUrl = '',
+                this.file = '';
+            })
             .catch((error)=>{console.log(error)});
         }
         // upload(file){
@@ -183,29 +157,12 @@ export default {
 </script>
 
 <style>
-
-table{
-    border: 1px solid gray;
-}
-tr{
-border: 1px solid gray;
-}
-td{
-border: 1px solid gray;
-}
-th{
-border: 1px solid gray;
-}
-.img-test{
-    width:300px;
-    height:500px;
-    
-}
 .test{
-    border: 2px solid black;
+    margin-top:5px;
+    margin-bottom: 5px;
 }
-.test-row{
-    border: 2px solid gray;
+.container{
+    border: 2px solid black;
 }
 .edit-btn{
   text-align: center;
@@ -229,8 +186,5 @@ border: 1px solid gray;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-#img-size {
-    width: 30%;
 }
 </style>
