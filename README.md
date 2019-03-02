@@ -9,12 +9,12 @@ portfolio site : https://rendarcp.github.io
 
 Skill
 -----
--Vue.js
--WebPack
--NPM
--Node.js
--BootStrap
--Firebase
+-Vue.js  
+-WebPack  
+-NPM  
+-Node.js  
+-BootStrap  
+-Firebase  
 
 ## Build Setup
 
