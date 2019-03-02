@@ -5,10 +5,16 @@ portfolio site : https://rendarcp.github.io
 
 
 # rendar_pf
-
 > rendar-portfolio-project-web
 
-
+Skill
+-----
+-Vue.js
+-WebPack
+-NPM
+-Node.js
+-BootStrap
+-Firebase
 
 ## Build Setup
 
