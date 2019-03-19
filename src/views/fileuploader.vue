@@ -6,28 +6,28 @@
                 <b-col cols="8" class="test">
                     <b-form-input v-model="title"
                             type="text"
-                            placeholder="Enter your name">
+                            placeholder="프로젝트명">
                     </b-form-input>
                 </b-col>
                 <b-col cols="4">설명</b-col>
                 <b-col cols="8" class="test">
                     <b-form-input v-model="contents"
                             type="text"
-                            placeholder="Enter your name">
+                            placeholder="프로젝트 설명">
                     </b-form-input>
                 </b-col>
                 <b-col cols="4">githubUrl</b-col>
                 <b-col cols="8" class="test">
                     <b-form-input v-model="gitUrl"
                             type="text"
-                            placeholder="Enter your name">
+                            placeholder="깃허브 주소">
                     </b-form-input>
                 </b-col>
                 <b-col cols="4">imgUrl</b-col>
                 <b-col cols="8" class="test">
                     <b-form-input v-model="imgUrl"
                             type="text"
-                            placeholder="Enter your name">
+                            placeholder="이미지URL(Firebase업로드시 자동)">
                     </b-form-input>
                 </b-col>
             </b-row>
