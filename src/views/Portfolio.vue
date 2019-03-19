@@ -1,11 +1,16 @@
 <template>
-    <div>
-        <div>
-            <h1 id="pf-title">My PortFolio</h1>
-            <div class="pf-content" v-for="portfolio in pflist">
-               <img :src="portfolio.imgUrl" id="img-size">
-               <p><a v-bind:href="portfolio.gitUrl" target="_blank">{{ portfolio.title }}</a></p>
-               <p>{{ portfolio.content }}</p>
+    <div class="testimonials">
+        <div class="inner">
+            <div>
+                <h1 id="pf-title">My PortFolio</h1>
+                <div class="border"></div>
+            </div>
+            <div class="row">
+                <div class="pf-content" v-for="portfolio in pflist">
+                    <img :src="portfolio.imgUrl" id="img-size">
+                    <p><a v-bind:href="portfolio.gitUrl" target="_blank">{{ portfolio.title }}</a></p>
+                    <p>{{ portfolio.content }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -39,6 +44,15 @@ export default {
 <style>
 #pf-title{
     text-align: center;
+    padding: 40px 0;
+    background:#f1f1f1;
+    color: #434343;
+}
+.testimonials{
+    padding: 40px 0;
+    background: #f1f1f1;
+    color:#434343;
+    text-align: center;
 }
 .pf-content{
     float:center;
@@ -46,9 +60,32 @@ export default {
     border-radius: 25px;
     border: 2px solid #636e72;
     text-align: center;
+    flex:33.33%;
+    max-width: 33.33%;
+    padding:30px;
+    background: #fff;
 }
 .pf-content img{
     margin-top: 20px;
-    width:300px;
+    width:200px;
+    height:220px;
+    border-radius: 10%;
+}
+.border{
+    width: 160px;
+    height: 5px;
+    background: #6ab04b;
+    margin: 26px auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media screen and (max-width:960px){
+    .pf-content{
+        flex:100%;
+        max-width: 80%;
+    }
 }
 </style>

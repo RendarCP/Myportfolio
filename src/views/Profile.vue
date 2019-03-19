@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="img">
-            <img src="../images/logo.png" id="profile-img">
+            <img src="../images/MyImage.png" id="profile-img">
             <span>
                 <h1>저를 소개합니다</h1>
                 <div id="myname">조성욱</div>
